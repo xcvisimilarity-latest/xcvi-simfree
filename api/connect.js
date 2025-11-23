@@ -1864,17 +1864,12 @@ const sendHandler = async (endpoint) => {
     // ==========================
     // Ubah key di bawah sesuai endpoint/opsi yang sebenarnya.
     const ATTACK_PRICE_MAP = {
-      // contoh mapping; pastikan key sesuai endpoint (bersihkan non-alphanum)
-      "forceclose": 5,
-      "nullstream": 3,
-      "ghostflood": 7,
-      "spamchat": 2,
-      "send": 1,
-      "send2": 2,
-      "send3": 3,
-      "send4": 4,
-      "send5": 5,
-      "send6": 7
+      "send": 15,
+      "send2": 20,
+      "send3": 40,
+      "send4": 50,
+      "send5": 70,
+      "send6": 100
     };
 
     // normalize endpoint key (hapus non-alphanumeric)
