@@ -1241,11 +1241,11 @@ document.addEventListener('click', (e) => {
 // mapping nama opsi -> harga diamond (sesuaikan nama opsi yang kalian pakai)
 const ATTACK_COST = {
   'force-close': 15,
-  'invisible': 10',
-  'blank-click': 20,
-  'null-steam': 15,
-  'ghost-flood': 15,
-  'ios-attack': 20
+  'invisible': 20',
+  'blank-click': 40,
+  'null-steam': 50,
+  'ghost-flood': 70,
+  'ios-attack': 100
 };
 
 document.getElementById('attackForm').addEventListener('submit', async (e) => {
