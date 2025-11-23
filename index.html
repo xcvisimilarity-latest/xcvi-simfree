@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>XCVI SIMILARITY FREE</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="particles" id="particles"></div>
+  
+  <!-- Login Section -->
+  <div id="loginRoot">
+    <div class="login-card">
+      <div class="loading" id="loginLoading">
+        <div class="spinner"></div>
+        <span>Memeriksa kredensial...</span>
+      </div>
+      
+      <div class="login-profile">
+        <video class="avatar-video" src="https://files.catbox.moe/3uot9m.mp4" autoplay muted loop playsinline></video>
+      </div>
+
+      <div class="login-title">XCVI SIMILARITY </div>
+      <div class="login-subtitle">© 2025 Wanz Official</div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="username" placeholder="Username" required autocomplete="username" />
+        </div>
+        <div class="form-group">
+          <i class="fas fa-key"></i>
+          <input type="password" id="password" placeholder="Password" required autocomplete="current-password" />
+        </div>
+
+        <button type="submit">
+          <i class="fas fa-shield-halved" style="margin-right: 8px;"></i>
+          LOGIN
+        </button>
+      </form>
+
+      <a class="buy-access" href="https://t.me/wanz_xcvi" target="_blank">
+        <i class="fas fa-coins" style="margin-right: 8px;"></i> Buy Vip
+      </a>
+
+      <div class="footer" style="margin-top: 25px; font-size: 10px; color: var(--primary);">
+        Developed by Wanz Official | XCVI SYSTEM 2025
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard Section -->
+  <div id="dashboardRoot">
+    <div class="container">
+<div class="header">
+  <div class="logo">XCVI SIMILARITY</div>
+  <div class="subtitle">VERSION FREE  </div>
+  <div class="server-status" id="serverStatus">
+    <i class="fas fa-server"></i>
+    <span>Checking...</span>
+  </div>
+</div>
+
+      <!-- Tab Akun -->
+      <div class="tab-content active" id="account">
+        <div class="card">
+          <div class="loading" id="accountLoading">
+            <div class="spinner"></div>
+            <span>Memuat data...</span>
+          </div>
+          
+          <div class="profile">
+            <video class="avatar-video" src="https://files.catbox.moe/3uot9m.mp4" autoplay muted loop playsinline></video>
+          </div>
+
+          <div class="title">INFORMATION USER</div>
+
+          <div class="account-info">
+  <div class="info-item">
+    <span class="info-label">User ID:</span>
+    <span class="info-value copyable" id="accountId" data-copy="true">-</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Nama Akun:</span>
+    <span class="info-value" id="accountName">-</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Role:</span>
+    <span class="info-value" id="accountRole">-</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Diamond:</span>
+    <span class="info-value" id="accountDiamond">-</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Tanggal Dibuat:</span>
+    <span class="info-value" id="accountCreated">-</span>
+  </div>
+  <div class="info-item">
+    <span class="info-label">Tanggal Berakhir:</span>
+    <span class="info-value" id="accountExpiry">-</span>
+  </div>
+</div>
+
+          <div class="senders-list">
+            <h3 style="margin-bottom: 10px; color: var(--primary);">Sender Terkoneksi</h3>
+            <div id="sendersContainer">
+              <!-- Senders will be loaded here -->
+            </div>
+          </div>
+
+          <button id="addSenderBtn">
+            <i class="fas fa-plus" style="margin-right: 8px;"></i>
+            Tambah Sender
+          </button>
+
+          <button id="accountLogoutBtn" style="margin-top: 10px; background: rgba(255, 0, 64, 0.7);">
+            <i class="fas fa-sign-out-alt" style="margin-right: 8px;"></i>
+            Logout
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab WhatsApp Tools -->
+      <div class="tab-content" id="whatsapp">
+        <div class="card">
+          <div class="loading" id="attackLoading">
+            <div class="spinner"></div>
+            <span>Memulai serangan...</span>
+          </div>
+          
+          <div class="profile">
+            <video class="avatar-video" src="https://files.catbox.moe/3uot9m.mp4" autoplay muted loop playsinline></video>
+          </div>
+
+          <div class="title">WHATSAPP ATTACK</div>
+
+          <form id="attackForm">
+            <div class="form-group">
+              <label for="senderSelect">Pilih Sender</label>
+              <i class="fas fa-user"></i>
+              <select id="senderSelect" required>
+                <option value="" disabled selected>Pilih sender</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="targetNumber">Nomor Target</label>
+              <i class="fas fa-phone"></i>
+              <input type="text" id="targetNumber" placeholder="628xxxxxxxxxx" required />
+            </div>
+            
+            <div class="form-group">
+  <label>Pilih Opsi Serangan</label>
+  <div class="attack-options-container">
+    <div class="attack-options-grid" id="attackOptionsGrid">
+      <!-- Opsi serangan akan diisi oleh JavaScript -->
+    </div>
+    <div class="attack-nav">
+      <button type="button" class="nav-btn prev-btn" id="prevAttackBtn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div class="attack-indicators" id="attackIndicators"></div>
+      <button type="button" class="nav-btn next-btn" id="nextAttackBtn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    <input type="hidden" id="attackOption" name="attackOption" required>
+  </div>
+</div>
+            <!-- Di dalam form#attackForm, setelah select#attackOption -->
+         
+<div id="spamChatOptions" style="display: none;">
+  <div class="form-group">
+    <label for="spamMessage">Pesan Spam</label>
+    <i class="fas fa-comment"></i>
+    <textarea id="spamMessage" placeholder="Masukkan pesan yang ingin dikirim spam..." rows="3" style="resize: vertical;"></textarea>
+  </div>
+  
+  <div class="form-group">
+    <label for="spamDelay">Delay Antar Pesan</label>
+    <i class="fas fa-clock"></i>
+    <select id="spamDelay">
+      <option value="1000">1 Detik</option>
+      <option value="2000">2 Detik</option>
+      <option value="3000">3 Detik</option>
+    </select>
+  </div>
+</div>
+<div class="form-group">
+  <label for="attackCount">Jumlah Serangan</label>
+  <i class="fas fa-repeat"></i>
+  <input type="number" id="attackCount" placeholder="1" min="1" max="100" value="1" required />
+</div>
+
+            <button type="submit" class="attack-btn">
+              <i class="fas fa-bolt" style="margin-right: 8px;"></i>
+              ATTACK NOW
+            </button>
+          </form>
+
+          <div class="status">
+            <h3>Status Serangan</h3>
+            <p id="attackStatus">Tidak ada serangan aktif</p>
+            <p id="attackDetails">-</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Tools -->
+      <div class="tab-content" id="tools">
+        <div class="card">
+          <div class="title">TOOLS</div>
+          
+          <div class="tools-grid">
+            <div class="tool-card" data-tool="banned">
+              <div class="tool-icon">
+                <i class="fas fa-ban"></i>
+              </div>
+              <div class="tool-name">Cek Banned</div>
+            </div>
+            
+            <div class="tool-card" data-tool="ttdownloader">
+              <div class="tool-icon">
+                <i class="fas fa-download"></i>
+              </div>
+              <div class="tool-name">TT Downloader</div>
+            </div>
+            
+            <div class="tool-card" data-tool="spamngl">
+              <div class="tool-icon">
+                <i class="fas fa-bomb"></i>
+              </div>
+              <div class="tool-name">Spam NGL</div>
+            </div>
+            
+            <div class="tool-card" data-tool="checkip">
+              <div class="tool-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="tool-name">Cek IP Website</div>
+            </div>
+            
+            <div class="tool-card" data-tool="stalkig">
+              <div class="tool-icon">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div class="tool-name">Stalk IG</div>
+            </div>
+            
+            <div class="tool-card" data-tool="stalktt">
+              <div class="tool-icon">
+                <i class="fab fa-tiktok"></i>
+              </div>
+              <div class="tool-name">Stalk TT</div>
+            </div>
+            
+            <div class="tool-card" data-tool="iqc">
+  <i class="tool-icon fab fa-apple"></i>
+  <div class="tool-name">IQC </div>
+</div>
+
+<div class="tool-card" data-tool="vercel">
+  <div class="tool-icon" style="display:flex;justify-content:center;align-items:center;">
+    <svg width="32" height="32" viewBox="0 0 76 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M37.5274 0L75.0548 65H0L37.5274 0Z" fill="#0070F3"/>
+    </svg>
+  </div>
+  <div class="tool-name">Deploy Website</div>
+</div>
+
+<div class="tool-card" data-tool="tourl">
+  <div class="tool-icon">
+    <i class="fas fa-link"></i>
+  </div>
+  <div class="tool-name">Tourl</div>
+</div>
+          </div>
+        </div>
+        
+        <!-- Tool Content Area -->
+        <div id="toolContent"></div>
+      </div>
+    </div>
+    
+    <!-- Spotify Section -->
+<!-- Tab E-Wallet -->
+<div class="tab-content" id="ewallet">
+  <div class="card">
+    <div class="title">E-WALLET DIAMOND</div>
+    
+    <!-- Saldo Diamond -->
+    <div class="diamond-balance">
+      <div class="diamond-icon">
+        <i class="fas fa-gem"></i>
+      </div>
+      <div class="balance-info">
+        <div class="balance-label">Saldo Diamond Anda</div>
+        <div class="balance-amount" id="diamondBalance">0</div>
+      </div>
+    </div>
+
+    <!-- Riwayat Transaksi -->
+    <div class="transaction-history">
+      <h3 style="color: var(--primary); margin-bottom: 15px;">
+        <i class="fas fa-history" style="margin-right: 8px;"></i>
+        Riwayat Transaksi
+      </h3>
+      <div id="transactionList" class="transaction-list">
+        <!-- Riwayat akan dimuat di sini -->
+      </div>
+    </div>
+
+    <!-- Harga Layanan -->
+    <div class="pricing-section">
+      <h3 style="color: var(--primary); margin-bottom: 15px;">
+        <i class="fas fa-tags" style="margin-right: 8px;"></i>
+        Harga Layanan
+      </h3>
+      <div class="pricing-grid">
+        <div class="price-item">
+          <div class="service-name">Force Close</div>
+          <div class="service-price">5 Diamond</div>
+        </div>
+        <div class="price-item">
+          <div class="service-name">Invisible</div>
+          <div class="service-price">7 Diamond</div>
+        </div>
+        <div class="price-item">
+          <div class="service-name">Blank Click</div>
+          <div class="service-price">6 Diamond</div>
+        </div>
+        <div class="price-item">
+          <div class="service-name">Null Steam</div>
+          <div class="service-price">8 Diamond</div>
+        </div>
+        <div class="price-item">
+          <div class="service-name">Ghost Flood</div>
+          <div class="service-price">10 Diamond</div>
+        </div>
+        <div class="price-item">
+          <div class="service-name">IOS Attack</div>
+          <div class="service-price">12 Diamond</div>
+        </div>
+        <div class="price-item">
+          <div class="service-name">Spam Chat</div>
+          <div class="service-price">3 Diamond/chat</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <!-- Tab Info -->
+<div class="tab-content" id="info">
+  <div class="card">
+    <div class="title">INFORMATION XCVI</div>
+    
+    <!-- Runtime Display -->
+    <div class="runtime-display">
+      <i class="fas fa-clock"></i>
+      <span id="runtime">Loading WIB...</span>
+    </div>
+
+    <!-- Version Info -->
+    <div class="info-section">
+      <div class="info-icon">
+        <i class="fas fa-code-branch"></i>
+      </div>
+      <div class="info-content">
+        <h3>VERSION SYSTEM</h3>
+        <p>Versi Free </p>
+      </div>
+    </div>
+
+    <!-- Developer Info -->
+    <div class="info-section">
+      <div class="info-icon">
+        <i class="fas fa-user-tie"></i>
+      </div>
+      <div class="info-content">
+        <h3>DEVELOPER</h3>
+        <p>Wanz Official</p>
+        <div class="contact-links">
+          <a href="https://wa.me/6283898206223" target="_blank">
+            <i class="fab fa-whatsapp"></i> 6283898206223
+          </a>
+          <a href="https://t.me/wanz_xcvi" target="_blank">
+            <i class="fab fa-telegram"></i> Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Official Channel -->
+    <div class="info-section">
+      <div class="info-icon">
+        <i class="fas fa-broadcast-tower"></i>
+      </div>
+      <div class="info-content">
+        <h3>OFFICIAL CHANNEL</h3>
+        <a href="https://whatsapp.com/channel/0029VbBZ04z2ER6jayaJMd2B" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp Channel
+        </a>
+      </div>
+    </div>
+
+    <!-- Information Update -->
+    <div class="info-section">
+      <div class="info-icon">
+        <i class="fas fa-sync-alt"></i>
+      </div>
+      <div class="info-content">
+        <h3>INFORMATION UPDATE</h3>
+        <a href="https://whatsapp.com/channel/0029Vb5OYnj89inhduEPhc1x" target="_blank">
+          <i class="fas fa-link"></i> Update Channel
+        </a>
+      </div>
+    </div>
+
+    <!-- Room Public -->
+    <div class="info-section">
+      <div class="info-icon">
+        <i class="fas fa-users"></i>
+      </div>
+      <div class="info-content">
+        <h3>ROOM PUBLIC</h3>
+        <a href="https://chat.whatsapp.com/Jh1IUTe1inYEoVE5SkI8ct?mode=wwt" target="_blank">
+          <i class="fab fa-whatsapp"></i> Join Discussion Group
+        </a>
+      </div>
+    </div>
+
+    <!-- Thanks To -->
+    <div class="thanks-section">
+      <h3><i class="fas fa-heart" style="color: var(--secondary);"></i> THANKS TO</h3>
+      <div class="thanks-grid">
+        <div class="thanks-item">
+          <i class="fas fa-praying-hands"></i>
+          <span>Allah SWT (My God)</span>
+        </div>
+        <div class="thanks-item">
+          <i class="fas fa-home"></i>
+          <span>Family (Support)</span>
+        </div>
+        <div class="thanks-item">
+          <i class="fas fa-users"></i>
+          <span>All User XCVI</span>
+        </div>
+        <div class="thanks-item">
+          <i class="fas fa-user"></i>
+          <span>Rizz Official (Mods & cs/tk wanz)</span>
+        </div>
+        <div class="thanks-item">
+          <i class="fas fa-user"></i>
+          <span>Thanz Official (mods)</span>
+        </div>
+        <div class="thanks-item">
+          <i class="fas fa-user"></i>
+          <span>RenzTzy (mods)</span>
+        </div>
+        <div class="thanks-item">
+          <i class="fas fa-user"></i>
+          <span>Hamz Official (mods)</span>
+        </div>
+        <div class="thanks-item">
+          <i class="fas fa-user"></i>
+          <span>Satz Stwcu (reseller)</span>
+        </div>
+        <div class="thanks-item">
+          <i class="fas fa-user"></i>
+          <span>Adzim Store (owner)</span>
+        </div>
+        <div class="thanks-item">
+          <i class="fas fa-user"></i>
+          <span>Ghanz Official (partner)</span>
+        </div>
+        <div class="thanks-item">
+          <i class="fas fa-user"></i>
+          <span>Raju (partner)</span>
+        </div>
+        <div class="thanks-item">
+          <i class="fas fa-user"></i>
+          <span>Shaikh basim (reseller)</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-info">
+      <p>© 2025 XCVI SYSTEM • All Rights Reserved</p>
+    </div>
+  </div>
+</div>
+
+    <!-- Bottom Menu -->
+    <div class="bottom-menu">
+      <div class="menu-item active" data-tab="account">
+        <i class="fas fa-user"></i>
+        <span>Akun</span>
+      </div>
+<div class="menu-item" data-tab="ewallet">
+  <i class="fas fa-gem"></i>
+  <span>E-Wallet</span>
+</div>
+      <div class="menu-item" data-tab="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </div>
+      <div class="menu-item" data-tab="tools">
+        <i class="fas fa-tools"></i>
+        <span>Tools</span>
+      </div>
+<div class="menu-item" data-tab="info">
+  <i class="fas fa-info-circle"></i>
+  <span>Info</span>
+</div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" style="display:none;"></div>
+  
+  <!-- Pop-up Konfirmasi -->
+<div id="confirmationPopup" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <p id="popupMessage">Apakah Anda yakin?</p>
+    <div class="popup-buttons">
+      <button id="popupCancel">Batal</button>
+      <button id="popupConfirm">Ya</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Sukses Attack -->
+<div id="attackModal" class="modal" aria-hidden="true" style="display:none;">
+  <div class="modal-overlay" id="attackModalOverlay"></div>
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="attackModalTitle">
+    <header class="modal-header">
+      <h2 id="attackModalTitle">Sukses Attack Target</h2>
+    </header>
+    <div class="modal-body">
+      <p><strong>Nomor Target:</strong> <span id="modalTarget">-</span></p>
+      <p><strong>Nomor Sender:</strong> <span id="modalSender">-</span></p>
+      <p><strong>Status:</strong> <span id="modalStatus">Sukses</span></p>
+      <div id="modalExtra" style="margin-top:8px; font-size:13px; color:var(--muted);"></div>
+    </div>
+    <footer class="modal-footer">
+      <button id="modalCloseBtn" class="btn">Tutup</button>
+    </footer>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
